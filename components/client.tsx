@@ -22,6 +22,10 @@ const navlinks = [
     label: "Courses",
     href: "/courses",
   },
+  {
+    label:"Summer Camps",
+    href:"/summer-camps"
+  },
   /*
   {
     label: "After School",
