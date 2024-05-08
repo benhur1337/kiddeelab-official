@@ -38,7 +38,7 @@ export default async function Page() {
 
                 <div className="p-6 text-3xl md:text-5xl font-bold text-sky-500 max-w-[900px] mx-auto my-[3rem] flex flex-col gap-6 items-center justify-start">
                     <div className="text-center">Sign up for our upcoming camp throughout June till August!</div>
-                    <Link className="font-semibold border border-orange-500 bg-orange-500 text-white p-2 text-lg md:text-2xl rounded hover:bg-white hover:text-orange-500 duration-500" href="/">Register now!</Link>
+                    <Link className="font-semibold border border-orange-500 bg-orange-500 text-white p-2 text-lg md:text-2xl rounded hover:bg-white hover:text-orange-500 duration-500" href="https://page.line.me/kiddeelab">Register now!</Link>
                 </div>
             </div>
 

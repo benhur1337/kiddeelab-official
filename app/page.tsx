@@ -54,7 +54,7 @@ export default async function Home() {
 
       <div>
         <div className="text-5xl text-orange-500 font-bold tracking-tighter p-6 md:max-w-[1100px] md:mx-auto">
-          {"What's new"}
+          {"What's new 🎉"}
         </div>
 
         <div className="flex flex-row no-wrap overflow-x-scroll px-6 my-4 max-w-[1100px] mx-auto">
@@ -65,9 +65,9 @@ export default async function Home() {
             >
               <Image
                 src={item.src}
-                width={250}
-                height={250}
-                className="h-[250px] object-cover rounded-xl drop-shadow"
+                width={1000}
+                height={1000}
+                className="h-[250px] w-auto object-contain rounded-xl drop-shadow"
                 alt="announcements"
               ></Image>
             </div>

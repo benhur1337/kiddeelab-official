@@ -97,8 +97,11 @@ export function Navbar() {
           "z-50 fixed bg-sky-500 top-0 flex flex-col items-start gap-4 font-bold p-6 h-screen w-screen max-w-full"
         }
       >
+        <div className="absolute left-0 w-screen h-screen object-contain flex justify-center items-center z-0">
+          <Image className="opacity-20" src='/logo-white.png' height={300} width={300} alt=""/>
+        </div>
         <button
-          className="text-xl self-end font-semibold border border-white p-2 px-4 rounded bg-none text-white"
+          className="text-xl self-end font-semibold border border-white p-2 px-4 rounded bg-none text-white z-50"
           onClick={closeMenu}
         >
           <FontAwesomeIcon icon={faXmark} />
