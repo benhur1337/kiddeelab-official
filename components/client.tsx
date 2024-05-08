@@ -110,8 +110,8 @@ export function Navbar() {
           <Link
             className={
               item.href == route
-                ? "underline underline-offset-8 text-white text-2xl hover:scale-110 duration-500"
-                : "text-white text-2xl hover:scale-110 duration-500"
+                ? "underline underline-offset-8 text-white text-2xl hover:scale-110 duration-500 z-50"
+                : "text-white text-2xl hover:scale-110 duration-500 z-50"
             }
             key={key}
             href={item.href}
