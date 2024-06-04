@@ -3,8 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default async function Home() {
-  
-  console.log('hello World')
 
   const certified = await fetch(
     "https://kiddeelab-backend.vercel.app/api/certified",
@@ -37,15 +35,31 @@ export default async function Home() {
           <div className="text-6xl font-bold tracking-tighter text-orange-500">
             Kiddee Lab
           </div>
-          <div className="text-2xl">STEM learning for kids and teens.</div>
-          <button className="text-xl border rounded bg-orange-500 border-orange-500 hover:bg-white hover:text-orange-500 duration-500 text-white p-2">
-            Read more
-          </button>
+          <div className="text-xl flex flex-col">
+            <div><span className="font-extrabold text-4xl">S</span>cience</div>
+            <div><span className="font-extrabold text-4xl">T</span>echnology</div>
+            <div><span className="font-extrabold text-4xl">E</span>ngineering</div>
+            <div><span className="font-extrabold text-4xl">A</span>rt</div>
+            <div><span className="font-extrabold text-4xl">M</span>ath</div>
+          </div>
+          <Link href="#about">
+            <button className="text-xl border rounded bg-white-500 border-orange-500 hover:bg-orange-500 hover:text-white duration-500 text-orange-500 p-2">
+              Read more
+            </button>
+            
+          </Link>
+          <Link href="https://page.line.me/kiddeelab">
+            <button className="text-xl border rounded bg-orange-500 border-orange-500 hover:bg-white hover:text-orange-500 duration-500 text-white p-2">
+              Private Free Trial
+            </button>
+            
+          </Link>
+        
         </div>
         <br />
         <iframe
           className="h-[250px] w-full rounded-xl md:h-[500px] md:w-[600px]"
-          src="https://www.youtube.com/embed/1-DClzkHc6Y"
+          src="https://www.youtube.com/embed/XnNrD-B9rFM"
           title="Welcome to Kiddee Lab"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen={true}
@@ -75,7 +89,7 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col items-start p-6 gap-4 md:max-w-[1100px] md:mx-auto">
+      <div id="about" className="flex flex-col items-start p-6 gap-4 md:max-w-[1100px] md:mx-auto">
         <div className="text-2xl font-bold tracking-tighter text-sky-500">
           About Us
         </div>

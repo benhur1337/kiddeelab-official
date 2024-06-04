@@ -1,20 +1,20 @@
 import { Scroll } from "@/components/client"
 
-export default async function Page({params}:{params:{slug:string}}){
-    const events = await fetch("https://kiddeelab-backend.vercel.app/api/events")
-        .then(function(response){
-            try{
-                return response.json()
-            }catch(err){
-                throw err
-            }
-        })
+import events from "../events"
 
-    console.log(events)
+export default async function Page({params}:{params:{slug:string}}){
+
+    const slug = params.slug.toString()
+    console.log(slug)
+
+    const event = events.filter(item => item.slug == slug)
+    console.log(event)
 
     return(
         <div className="flex flex-col gap-4 max-w-[1100px] mx-auto p-6"> 
-            <div className="text-5xl font-bold tracking-tighter text-orange-500">Event Title</div>
+            <div className="text-5xl font-bold tracking-tighter text-orange-500">{event[0].title}</div>
+            <div className="text-2xl font-bold tracking-tighter text-orange-300">{event[0].event}</div>
+            <div className="text-xl font-bold tracking-tighter text-sky-500">{event[0].authors.map(item => item + " ")}</div>
             <Scroll>
                 {
                     [1,2,3,4,5].map((item:any, key:number) => <div key={key} className="h-[250px] w-[400px] bg-black rounded"></div>)

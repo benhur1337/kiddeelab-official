@@ -21,6 +21,8 @@ export default async function Page() {
     (items: any) => items.category == "STEM Teacher"
   );
 
+  console.log(staff)
+
   return (
     <div>
       <div className="flex flex-col items-start p-6 gap-6 md:max-w-[1100px] md:mx-auto mb-4">
@@ -35,6 +37,7 @@ export default async function Page() {
             _id={item._id}
             key={key}
             src={item.src}
+            slug={item.slug}
             nickName={item.nickName}
             position={item.position}
           />
@@ -53,6 +56,7 @@ export default async function Page() {
             _id={item._id}
             key={key}
             src={item.src}
+            slug={item.slug}
             nickName={item.nickName}
             position={item.position}
           />
@@ -71,6 +75,7 @@ export default async function Page() {
             _id={item._id}
             key={key}
             src={item.src}
+            slug={item.slug}
             nickName={item.nickName}
             position={item.position}
           />
@@ -80,11 +85,11 @@ export default async function Page() {
   );
 }
 
-function StaffCard(item: { _id: any; src: any; nickName: any; position: any }) {
+function StaffCard(item: { _id: any; src: any; nickName: any; position: any; slug:any }) {
   return (
     <div
       key={item._id}
-      className="z-10 m-2 flex-none bg-white min-h-[400px] min-w-[250px] max-h-[400px] max-w-[250px] rounded-xl duration-500 hover:scale-95 drop-shadow hover:drop-shadow-lg"
+      className="z-10 m-2 flex-none bg-white min-h-[400px] min-w-[250px] max-h-[450px] max-w-[250px] rounded-xl duration-500 hover:scale-95 drop-shadow hover:drop-shadow-lg"
     >
       <Image
         src={item.src}
@@ -95,9 +100,10 @@ function StaffCard(item: { _id: any; src: any; nickName: any; position: any }) {
       ></Image>
       <div className="flex flex-col justify-center items-start p-4">
         <div className="text-3xl font-bold text-sky-500">{item.nickName}</div>
-        <div className="text-md opacity-60 font-bold text-sky-500">
+        <div className="text-md opacity-60 font-bold text-sky-500 mb-2">
           {item.position}
         </div>
+        <Link href={"/our-team/" + item.slug}><button className="bg-orange-500 border border-orange-500 font-semibold text-white p-2 rounded hover:bg-white hover:text-orange-500 duration-500">Qualifications</button></Link>
       </div>
     </div>
   );

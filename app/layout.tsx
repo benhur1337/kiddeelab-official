@@ -2,12 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import Script from 'next/script'
+import Script from "next/script";
 
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from '@vercel/speed-insights/next';
-
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,12 +42,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <NavbarInvis />
         <div>
           {children}
-          <PhoneBar/>
+          <PhoneBar />
         </div>
         <Analytics />
         <SpeedInsights />
+
+        <Script
+          strategy="afterInteractive"
+          id="agentScript"
+          dangerouslySetInnerHTML={{
+            __html: `(function(d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+              window.voiceflow.chat.load({
+                verify: { projectID: '664d75fb0d2a56fe55e6f2fb' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production'
+              });
+            }
+            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+        })(document, 'script');`,
+          }}
+        ></Script>
         <Footer />
-        
+
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-M5TWRF58"

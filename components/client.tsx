@@ -35,11 +35,12 @@ const navlinks = [
     label: "Workshops",
     href: "/workshops",
   },
+  
+  */
   {
     label: "Events",
     href: "/events",
   },
-  */
   {
     label: "Our Team",
     href: "/our-team",
@@ -121,7 +122,7 @@ export function Navbar() {
           </Link>
         ))}
 
-        <Link href={"https://page.line.me/kiddeelab"}>
+        <Link className="z-50" href={"https://page.line.me/kiddeelab"}>
           <button className="text-white text-2xl font-semibold border border-white hover:bg-white hover:text-sky-500 duration-500 p-2 rounded">
             Free Trial
           </button>
