@@ -97,7 +97,7 @@ export default async function Home() {
           More than coding.
         </div>
         <div className="flex flex-col md:flex-row gap-9 justify-between items-center">
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 p-6">
             {
               " Kiddee Lab is the only Robotics and Coding School in Thailand with a curriculum accredited by the Ministry of Education. We have up to 30 courses for kids and young adults (5-18 years old). Our students are currently learning: Line Coding, Scratch programming, 3D Modelling/Design, Minecraft Education, Python, Arduino, IoT, Robotics, Robot Arm, and etc. Each course is designed to be both challenging and fun!"
             }
@@ -115,7 +115,7 @@ export default async function Home() {
           </div>
         </div>
         <div className="flex flex-col md:flex-row-reverse gap-9 justify-between items-center">
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 p-6">
             {
               "Kiddee Lab’s curriculum revolves around STEAM (Science, Technology, Engineering, Arts and Mathematics) Education. Apart from technical knowledge, we also train our students to have practical skills like teamwork, creativity and critical thinking for tackling problems that they may face in everyday life."
             }
@@ -133,7 +133,7 @@ export default async function Home() {
           </div>
         </div>
       </div>
-
+      <iframe width='100%' height='480' src='https://my.matterport.com/show/?m=PfrsXBXommi' allow='xr-spatial-tracking'></iframe>
       <div>
         <div className="text-5xl text-orange-500 font-bold tracking-tighter p-6 md:max-w-[1100px] md:mx-auto">
           {"Our Courses"}
