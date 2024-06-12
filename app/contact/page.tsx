@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareFacebook, faSquareInstagram, faLine } from "@fortawesome/free-brands-svg-icons";
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Page(){
@@ -17,6 +18,7 @@ export default function Page(){
                         <Link href={'https://www.facebook.com/kiddeelab/'} className='text-3xl'><FontAwesomeIcon icon={faSquareFacebook}/></Link>
                         <Link href={'https://www.instagram.com/kiddeelab'} className='text-3xl'><FontAwesomeIcon icon={faSquareInstagram} /></Link>
                         <Link href={'https://page.line.me/kiddeelab'} className='text-[1.640625rem]'><FontAwesomeIcon icon={faLine} /></Link>
+                        <Link href={'tel:0838871199'}><FontAwesomeIcon icon={faPhone} /></Link>
                     </div>
                 </div>
                
