@@ -18,7 +18,7 @@ export default function Page(){
                         <Link href={'https://www.facebook.com/kiddeelab/'} className='text-3xl'><FontAwesomeIcon icon={faSquareFacebook}/></Link>
                         <Link href={'https://www.instagram.com/kiddeelab'} className='text-3xl'><FontAwesomeIcon icon={faSquareInstagram} /></Link>
                         <Link href={'https://page.line.me/kiddeelab'} className='text-[1.640625rem]'><FontAwesomeIcon icon={faLine} /></Link>
-                        <Link href={'tel:0838871199'}><FontAwesomeIcon icon={faPhone} /></Link>
+                        <Link href={'tel:0838871199'}><FontAwesomeIcon className='text-[1.640625rem]' icon={faPhone} /></Link>
                     </div>
                 </div>
                
@@ -32,6 +32,7 @@ export default function Page(){
                     <div className="flex flex-row gap-4 items-center">
                         <Link href={'https://www.facebook.com/KiddeeLab.Chaiyapruk'} className='text-3xl'><FontAwesomeIcon icon={faSquareFacebook}/></Link>
                         <Link href={'https://line.me/R/ti/p/@373uxkbp'} className='text-[1.640625rem]'><FontAwesomeIcon icon={faLine} /></Link>
+                        <Link href={'tel:0656954655'}><FontAwesomeIcon className='text-[1.640625rem]' icon={faPhone} /></Link>
                     </div>
                 </div>
                 <iframe className="rounded-xl" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15490.405098098247!2d100.474662!3d13.922765!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e285a87cc60e9f%3A0x3f64d906c99eaf09!2sThe%20Crystal%20PTT!5e0!3m2!1sen!2sus!4v1711449198834!5m2!1sen!2sus" width="350" height="350" style={{border:0}} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
