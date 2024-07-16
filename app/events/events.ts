@@ -10,10 +10,10 @@ const events = [
     authors: [
       "Xavier Jonathon Blake",
       "Narong Aphiratsakun"
-    ]
+    ],
   },
   {
-    slug:"iStem2022",
+    slug:"iStem-2022",
     cover:"https://hjjvqkkuostdemaf.public.blob.vercel-storage.com/events/halocode/IMG_2159-VagHi4BXRUOmaZb6GLLf9qOH1R6zf7.JPG",
     title:"iStem2022",
     subheading:"Applied Learning of Python based Arduino with Kiddee lab's STEM Kit-l (KiddeeSTEM1)",
@@ -25,7 +25,7 @@ const events = [
     ]
   },
   {
-    slug:"iEECon2023",
+    slug:"iEECon-2023",
     cover:"https://hjjvqkkuostdemaf.public.blob.vercel-storage.com/events/ieecon2023/IMG_9326-uZvicGh4K3nP5N1eHsAaXEid0blAaO.JPG",
     title:"iEECon2023",
     subheading:"Location, orientation, and speed tracking of a robot using ROS: a case study with Whycon",
@@ -37,7 +37,7 @@ const events = [
     ]
   },
   {
-    slug:"iSTEM2023",
+    slug:"iSTEM-2023",
     cover:"https://hjjvqkkuostdemaf.public.blob.vercel-storage.com/events/istem2023/IMG_5865-xfxX34Y7D7UuoKoTXwiHHlL0Z8lMSg.JPG",
     title:"iSTEM2023",
     subheading:"A Case Study on AAC Implementation; Funjai Application",
