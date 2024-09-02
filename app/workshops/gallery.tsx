@@ -50,7 +50,7 @@ export default function Gallery(props:{images:any}){
                     <div className="flex flex-row gap-4">
                         {
                             [1,2,3].map((item:any, key:number) => (
-                                <div className="bg-orange-500 h-2 w-2 rounded-full"></div>
+                                <div key={key} className="bg-orange-500 h-2 w-2 rounded-full"></div>
                             ))
                         }
                     </div>
