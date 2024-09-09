@@ -10,7 +10,7 @@ export default async function Page(){
     <div>
       <div className="text-6xl text-orange-500 tracking-tighter font-bold max-w-[1100px] mx-auto p-6">Events</div>
       <div className="flex flex-row no-wrap overflow-x-scroll px-6 my-4 max-w-[1100px] mx-auto">
-        {events.map((item: any, key: number) => (
+        {(events.reverse()).map((item: any, key: number) => (
           <div
             key={key}
             className="flex flex-col justify-evenly z-10 m-2 flex-none bg-white min-h-[350px] min-w-[350px] max-h-[350px] max-w-[350px] rounded-xl duration-500 hover:scale-95 drop-shadow hover:drop-shadow-lg"
