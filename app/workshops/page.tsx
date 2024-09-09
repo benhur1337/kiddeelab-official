@@ -1,66 +1,66 @@
-import Image from "next/image"
-import Link from "next/link"
-
-import Gallery from "./gallery.jsx";
-
-import { unstable_noStore } from "next/cache";
+import Image from "next/image";
+import Link from "next/link";
 
 
+interface Workshop{
+  heading:string,
+  link:string,
+  image:string
+}
 
-export default async function Page(){
-  unstable_noStore()
+const workshops = [
+  {
+    heading:"AITIS",
+    link:"/workshops/aitis",
+    image:"https://hjjvqkkuostdemaf.public.blob.vercel-storage.com/events/aitis/LINE_ALBUM_Codey%20Rocky%20Workshop%20@AITIS%207Nov23_240304_13-min-pbVo68qmOJ7eKPniImOvVXaWegtNr9.jpg"
+  },
+  {
+    heading:"Ying Yod",
+    link:"/workshops/ying-yod",
+    image:"https://hjjvqkkuostdemaf.public.blob.vercel-storage.com/events/ying-yod/IMG_2007-min-GoooMScBdybT0BTa1mNaNzq2vhNabl.JPG"
+  }
+]
 
-  const courses = await fetch(
-    "https://kiddeelab-backend.vercel.app/api/workshops",
-    {
-      method: "GET",
-      cache: "no-cache",
-    }
-  ).then((response) => response.json());
+export default async function Page() {
+  return (
+    <div className="max-w-[1100px] mx-auto flex flex-col gap-4 p-6">
+      <div className="text-6xl text-orange-500 tracking-tighter font-bold">
+        Workshops
+      </div>
 
+<<<<<<< HEAD
   
+=======
+      {
+        workshops.map((item:Workshop, key:number) => (
+          <Banner image={item.image} heading={item.heading} link={item.link} key={key} /> 
+        ))
+      }
+>>>>>>> 655b592bac63b3a5d23c3cce99d3d2172300aeb8
 
-  const gallery = [1,2,3,4,5,6,7,8,9]
-  
-  return(
-    /*
-    <div>
-      <div className="text-6xl font-bold tracking-tighter text-orange-500 max-w-[1100px] mx-auto p-6">Workshops</div>
-      <div className="flex flex-row no-wrap overflow-x-scroll px-6 my-4 max-w-[1100px] mx-auto">
-        {courses.items.map((item: any, key: number) => (
-          <div
-            key={item._id}
-            className="z-10 m-2 flex-none bg-white min-h-[300px] min-w-[300px] max-h-[300px] max-w-[300px] rounded-xl duration-500 hover:scale-95 drop-shadow hover:drop-shadow-lg"
-          >
-            <Image
-              src={item.cover}
-              width={1000}
-              height={1000}
-              className="w-full h-[200px] object-cover rounded-xl"
-              alt="workshops"
-            ></Image>
-            <div className="flex flex-col justify-center items-start p-2 gap-2">
-              <div className="text-3xl font-bold text-orange-500">
-                {item.title}
-              </div>
-              <Link
-                className="rounded border px-[0.5rem] py-[0.25rem] text-white bg-orange-500 border-orange-500 hover:bg-white hover:text-orange-500 duration-500"
-                href={"/workshops/" + item.slug}
-              >
-                Learn more
-              </Link>
-            </div>
-          </div>
-        ))}
+    </div>
+  );
+}
+
+function Banner(props:{heading:string, link:string, image:string}) {
+  return (
+    <div className="h-[350px] w-full rounded-lg"
+      style={{
+        backgroundImage:`url(${props.image})`,
+        backgroundRepeat:`no-repeat`,
+        backgroundPosition:`center`,
+        backgroundSize:`cover`
+      }}
+    >
+      <div className="bg-[rgba(0,0,0,0.5)] flex flex-col gap-4 justify-center items-center text-white h-full w-full rounded-lg">
+        <div className="text-5xl font-bold tracking-tighter">{props.heading}</div>
+        <Link
+          href={props.link}
+          className="bg-orange-500 rounded p-2 border border-orange-500 hover:bg-transparent hover:text-orange-500 duration-500"
+        >
+          See More
+        </Link>
       </div>
     </div>
-
-    */
-
-    <div>
-
-      <Gallery/>
-      
-    </div>
-  )
+  );
 }

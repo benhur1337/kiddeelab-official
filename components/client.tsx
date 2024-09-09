@@ -31,12 +31,13 @@ const navlinks = [
     label: "After School",
     href: "/after-school",
   },
+
+  
+  */
   {
     label: "Workshops",
     href: "/workshops",
   },
-  
-  */
   {
     label: "Events",
     href: "/events",
