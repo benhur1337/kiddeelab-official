@@ -28,15 +28,11 @@ export default async function Page() {
         Workshops
       </div>
 
-<<<<<<< HEAD
-  
-=======
       {
         workshops.map((item:Workshop, key:number) => (
           <Banner image={item.image} heading={item.heading} link={item.link} key={key} /> 
         ))
       }
->>>>>>> 655b592bac63b3a5d23c3cce99d3d2172300aeb8
 
     </div>
   );

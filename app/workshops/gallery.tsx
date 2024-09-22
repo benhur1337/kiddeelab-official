@@ -41,7 +41,7 @@ export default function Gallery(props:{images:any}){
             <div className="h-[400px] md:h-[500px] w-screen max-w-[1100px] mx-auto  text-white text-5xl flex flex-col gap-6 justify-start items-center rounded-lg">
                 <div className="flex flex-row justify-between items-center w-full gap-4">
                     <button className="hidden md:block rounded-full h-[64px] w-[64px] text-center opacity-50 hover:opacity-100 duration-500" onClick={galleryPrev}><FontAwesomeIcon className="text-orange-500" icon={faArrowCircleLeft}/></button>
-                    <Image height={1000} width={1000} src={imageGallery[galleryIndex]} alt="" className="rounded-lg h-[400px] md:h-[500px] md:w-full object-cover"/>
+                    <Image priority={true} height={1000} width={1000} src={imageGallery[galleryIndex]} alt="" className="rounded-lg h-[400px] md:h-[500px] md:w-full object-cover"/>
                     <button className="hidden md:block rounded-full h-[64px] w-[64px] text-center opacity-50 hover:opacity-100 duration-500" onClick={galleryNext}><FontAwesomeIcon  className="text-orange-500"  icon={faArrowCircleRight}/></button>
                 </div>
 
