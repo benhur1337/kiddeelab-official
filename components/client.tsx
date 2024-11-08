@@ -234,17 +234,51 @@ export function Footer() {
 }
 
 export function Scroll(props: { children: React.ReactNode }) {
-  return (
-    <ScrollCarousel
-      autoplay
-      autoplaySpeed={8}
-      speed={7}
-      onReady={() => console.log("I am ready")}
-      className="z-[-5]"
-    >
-      {props.children}
-    </ScrollCarousel>
-  );
+
+  const [loading, setLoading] = useState(true)
+
+  const [ghostLoad, setGhostLoad] = useState(true)
+
+  return(
+    <>
+      <ScrollCarousel
+        autoplay
+        autoplaySpeed={8}
+        speed={7}
+        className={loading? "hidden" : "z-[-5]"}
+      >
+
+        {
+          props.children
+        }
+        
+      </ScrollCarousel>
+
+      <ScrollCarousel
+        autoplay
+        autoplaySpeed={8}
+        speed={7}
+        onReady={() => {
+          setGhostLoad(false)
+          setTimeout(() => {
+            setLoading(false)
+            setGhostLoad(true)
+          }, 2000)
+        }}
+        className={ghostLoad? "hidden" : "z-[-5]"}
+      >
+
+        {
+          [1,2,3,4,5,6,7,8].map(item => (
+            <div className="bg-gray-500 h-[325px] w-[325px] animate-pulse rounded-lg p-4" key={item}>
+
+            </div>
+          ))
+        }
+        
+      </ScrollCarousel>
+    </>
+  )
 }
 
 export function PhoneBar() {
